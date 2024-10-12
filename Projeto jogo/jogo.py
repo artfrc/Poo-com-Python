@@ -45,7 +45,6 @@ class Heroi(Personagem):
     alvo.receber_ataque(dano)
     print(f"{self.get_nome()} usou habilidade especial {self.get_habilidade()} em {alvo.get_nome()} e causou {dano} de dano")
 
-  
 class Inimigo(Personagem):
   def __init__(self, nome, vida, nivel, tipo):
     super().__init__(nome, vida, nivel)
@@ -90,8 +89,6 @@ class Jogo:
       
     else:
       print("\nVocê foi derrotado!") 
-          
+        
 jogo = Jogo()
 jogo.iniciar_batalha()
-      
-  
