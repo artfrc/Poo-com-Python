@@ -18,7 +18,7 @@ class Gato(Animal):
   def emitir_som(self):
     return "miauuu"
   
-cachorro = Cachorro("Luninha")
+cachorro = Cachorro("Rex")
 gato = Gato("Felix")
 
 print("\nExemplo de polimorfismo")
@@ -50,6 +50,31 @@ print(conta.depositar(1000))
 print(conta.consultar_saldo())
 print(conta.sacar(200))
 print(conta.consultar_saldo())
+
+print("\nExemplo de abstração:")
+from abc import ABC, abstractmethod
+
+class Veiculo(ABC):
+  
+  @abstractmethod
+  def ligar(self):
+    pass
+  
+  @abstractmethod
+  def desligar(self):
+    pass
+
+class Carro(Veiculo):
+  
+  def ligar(self):
+    return f"O carro ligou"
+  
+  def desligar(self):
+    return  f"O carro desligou"
+  
+carro = Carro()
+print(carro.ligar())
+print(carro.desligar())  
     
   
     
