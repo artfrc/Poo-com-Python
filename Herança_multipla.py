@@ -20,7 +20,10 @@ class Morcego(Mamifero, Ave):
     
 morcego = Morcego("Batman")
 
-  #Acessando os métodos da classe animal
+# Acessando os métodos da classe animal
 print(f"Nome do morcego eh {morcego.nome}")
-print(morcego.amamentar())
 print(morcego.emitir_som())
+
+# Acessando os métodos da classe Ave e Mamifero
+print(morcego.voar())
+print(morcego.amamentar())
